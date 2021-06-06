@@ -61,7 +61,14 @@ let SourceMaps
 
 let LinterChecks
     : Type
-    = {}
+    = { noFallthroughCasesInSwitch : Optional Bool
+      , noImplicitOverride : Optional Bool
+      , noImplicitReturns : Optional Bool
+      , noPropertyAccessFromIndexSignature : Optional Bool
+      , noUncheckedIndexedAccess : Optional Bool
+      , noUnusedLocals : Optional Bool
+      , noUnusedParameters : Optional Bool
+      }
 
 let Experimental
     : Type
