@@ -6,8 +6,8 @@ let Advanced = CompilerOptions.Advanced
 
 in  { TsConfig = ./tsconfig.dhall
     , CompilerOptions
-    , JsxValue = ProjectOptions.JsxValue
-    , ModuleValue = ProjectOptions.ModuleValue
-    , TargetValue = ProjectOptions.TargetValue
+    , JsxOption = ProjectOptions.JsxOption
+    , ModuleOption = ProjectOptions.ModuleOption
+    , TargetOption = ProjectOptions.TargetOption
     , ImportsNotUsedAsValuesOption = Advanced.ImportsNotUsedAsValuesOption
     }
