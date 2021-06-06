@@ -53,7 +53,11 @@ let ModuleResolution
 
 let SourceMaps
     : Type
-    = {}
+    = { inlineSourceMap : Optional Bool
+      , inlineSource : Optional Bool
+      , mapRoot : Optional Text
+      , sourceRoot : Optional Text
+      }
 
 let LinterChecks
     : Type
