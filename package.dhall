@@ -6,4 +6,5 @@ in  { TsConfig = ./tsconfig.dhall
     , CompilerOptions
     , JsxValue = ProjectOptions.JsxValue
     , ModuleValue = ProjectOptions.ModuleValue
+    , TargetValue = ProjectOptions.TargetValue
     }

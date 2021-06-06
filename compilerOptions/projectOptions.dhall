@@ -6,6 +6,22 @@ let ModuleValue
     : Type
     = < CommonJS | AMD | System | UMD | ES6 | ES2015 | ES2020 | ESNext | None >
 
+let TargetValue
+    : Type
+    = < ES3
+      | ES5
+      | ES6
+      | ES2015
+      | ES7
+      | ES2016
+      | ES2017
+      | ES2018
+      | ES2019
+      | ES2020
+      | ES2021
+      | ESNext
+      >
+
 let ProjectOptions
     : Type
     = { allowJs : Optional Bool
@@ -27,7 +43,7 @@ let ProjectOptions
       , removeComments : Optional Bool
       , rootDir : Optional Text
       , sourceMap : Optional Bool
-      , target : Optional Text
+      , target : Optional TargetValue
       , tsBuildInfoFile : Optional Text
       }
 
@@ -52,8 +68,8 @@ let default
       , removeComments = None Bool
       , rootDir = None Text
       , sourceMap = None Bool
-      , target = None Text
+      , target = None TargetValue
       , tsBuildInfoFile = None Text
       }
 
-in  { Type = ProjectOptions, default, JsxValue, ModuleValue }
+in  { Type = ProjectOptions, default, JsxValue, ModuleValue, TargetValue }
