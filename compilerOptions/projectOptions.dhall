@@ -2,6 +2,10 @@ let JsxValue
     : Type
     = < preserve | react | react-jsx | react-jsxdev | react-native >
 
+let ModuleValue
+    : Type
+    = < CommonJS | AMD | System | UMD | ES6 | ES2015 | ES2020 | ESNext | None >
+
 let ProjectOptions
     : Type
     = { allowJs : Optional Bool
@@ -15,7 +19,7 @@ let ProjectOptions
       , isolatedModules : Optional Bool
       , jsx : Optional JsxValue
       , lib : Optional (List Text)
-      , module : Optional Text
+      , module : Optional ModuleValue
       , noEmit : Optional Bool
       , outDir : Optional Text
       , outFile : Optional Text
@@ -40,7 +44,7 @@ let default
       , isolatedModules = None Bool
       , jsx = None JsxValue
       , lib = None (List Text)
-      , module = None Text
+      , module = None ModuleValue
       , noEmit = None Bool
       , outDir = None Text
       , outFile = None Text
@@ -52,4 +56,4 @@ let default
       , tsBuildInfoFile = None Text
       }
 
-in  { Type = ProjectOptions, default, JsxValue }
+in  { Type = ProjectOptions, default, JsxValue, ModuleValue }
