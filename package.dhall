@@ -72,7 +72,9 @@ let LinterChecks
 
 let Experimental
     : Type
-    = {}
+    = { emitDecoratorMetadata : Optional Bool
+      , experimentalDecorators : Optional Bool
+      }
 
 let Advanced
     : Type
