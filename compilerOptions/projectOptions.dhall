@@ -1,3 +1,7 @@
+let JsxValue
+    : Type
+    = < preserve | react | react-jsx | react-jsxdev | react-native >
+
 let ProjectOptions
     : Type
     = { allowJs : Optional Bool
@@ -9,7 +13,7 @@ let ProjectOptions
       , importHelpers : Optional Bool
       , incremental : Optional Bool
       , isolatedModules : Optional Bool
-      , jsx : Optional Text
+      , jsx : Optional JsxValue
       , lib : Optional (List Text)
       , module : Optional Text
       , noEmit : Optional Bool
@@ -34,7 +38,7 @@ let default
       , importHelpers = None Bool
       , incremental = None Bool
       , isolatedModules = None Bool
-      , jsx = None Text
+      , jsx = None JsxValue
       , lib = None (List Text)
       , module = None Text
       , noEmit = None Bool
@@ -48,4 +52,4 @@ let default
       , tsBuildInfoFile = None Text
       }
 
-in  { Type = ProjectOptions, default }
+in  { Type = ProjectOptions, default, JsxValue }
