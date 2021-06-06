@@ -1,6 +1,6 @@
 # dhall-tsconfig
 
-TSConfig definitions for Dhall
+[Dhall](https://dhall-lang.org/) bindings for [TSConfig](https://www.typescriptlang.org/tsconfig).
 
 ## Usage
 
