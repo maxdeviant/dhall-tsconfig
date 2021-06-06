@@ -36,4 +36,9 @@ let default
       ∧ Advanced.default
       ∧ CommandLine.default
 
-in  { Type = CompilerOptions, default, ProjectOptions, Advanced }
+in  { Type = CompilerOptions
+    , default
+    , ProjectOptions
+    , ModuleResolution
+    , Advanced
+    }
