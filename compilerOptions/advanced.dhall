@@ -1,3 +1,5 @@
+let ImportsNotUsedAsValuesOption : Type = < remove | preserve | error >
+
 let Advanced
     : Type
     = { allowUnreachableCode : Optional Bool
@@ -13,7 +15,7 @@ let Advanced
       , explainFiles : Optional Bool
       , extendedDiagnostics : Optional Bool
       , forceConsistentCasingInFileNames : Optional Bool
-      , importsNotUsedAsValues : Optional Text
+      , importsNotUsedAsValues : Optional ImportsNotUsedAsValuesOption
       , jsxFactory : Optional Text
       , jsxFragmentFactory : Optional Text
       , jsxImportSource : Optional Text
@@ -53,7 +55,7 @@ let default
       , explainFiles = None Bool
       , extendedDiagnostics = None Bool
       , forceConsistentCasingInFileNames = None Bool
-      , importsNotUsedAsValues = None Text
+      , importsNotUsedAsValues = None ImportsNotUsedAsValuesOption
       , jsxFactory = None Text
       , jsxFragmentFactory = None Text
       , jsxImportSource = None Text
@@ -78,4 +80,4 @@ let default
       , useDefineForClassFields = None Bool
       }
 
-in  { Type = Advanced, default }
+in  { Type = Advanced, default, ImportsNotUsedAsValuesOption }
