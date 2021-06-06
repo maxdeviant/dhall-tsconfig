@@ -105,7 +105,7 @@ let Advanced
 
 let CommandLine
     : Type
-    = { pretty : Optional Bool }
+    = { preserveWatchOutput : Optional Bool, pretty : Optional Bool }
 
 let CompilerOptions
     : Type
