@@ -8,6 +8,7 @@ let StrictChecks
       , strictFunctionTypes : Optional Bool
       , strictNullChecks : Optional Bool
       , strictPropertyInitialization : Optional Bool
+      , useUnknownInCatchVariables : Optional Bool
       }
 
 let default
@@ -20,6 +21,7 @@ let default
       , strictFunctionTypes = None Bool
       , strictNullChecks = None Bool
       , strictPropertyInitialization = None Bool
+      , useUnknownInCatchVariables = None Bool
       }
 
 in  { Type = StrictChecks, default }
